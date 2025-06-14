@@ -1,90 +1,96 @@
-# Análise e Previsão de Preços de Veículos no Brasil
+# Analysis and Prediction of Vehicle Prices in Brazil
 
----
+-----
 
-## Descrição do Projeto
+## Project Description
 
-Este projeto foi desenvolvido em grupo como trabalho para disciplina de Linguagem de Programação Aplicada, do curso de pós-graduação em Inteligência Artificial Aplicada da Universidade Federal do Paraná. Ele tem como objetivo realizar uma análise exploratória detalhada e construir modelos de machine learning para prever os preços médios de carros no mercado brasileiro. Utilizando um conjunto de dados de veículos, exploramos diversas características e aplicamos algoritmos de regressão para identificar os fatores mais influentes na precificação e alcançar a melhor acurácia na previsão.
+This project was developed as a group assignment for the Applied Programming Language course, part of the postgraduate program in Applied Artificial Intelligence at the Federal University of Paraná. Its objective is to perform a detailed exploratory analysis and build machine learning models to predict the average prices of cars in the Brazilian market. Using a vehicle dataset, we explored various features and applied regression algorithms to identify the most influential factors in pricing and to achieve the best prediction accuracy.
 
----
+-----
 
-## Participantes do projeto
-* Francisco Viana
-* Gabriel Godinho
-* Guilherme Bilibio
-* José Augusto Viana
-* Ricardo Monteiro
-* Rodrigo Dittmar
+## Project Participants
 
-## Docente
-Prof. Dra. Luani de Oliveira Rosa Piva
+  * Francisco Viana
+  * Gabriel Godinho
+  * Guilherme Bilibio
+  * José Augusto Viana
+  * Ricardo Monteiro
+  * Rodrigo Dittmar
 
----
+## Professor
 
-## Objetivos
+Prof. Dr. Luani de Oliveira Rosa Piva
 
-* Realizar um pré-processamento e limpeza dos dados, tratando valores ausentes e transformando variáveis.
-* Conduzir uma análise exploratória de dados (EDA) para extrair insights sobre a distribuição de preços e a relação entre as características dos veículos.
-* Desenvolver e treinar modelos de regressão (RandomForest Regressor e XGBoost Regressor) para prever os preços dos carros.
-* Avaliar e comparar o desempenho dos modelos utilizando métricas como Erro Absoluto Médio (MAE), Erro Quadrático Médio (MSE) e Coeficiente de Determinação (R²).
-* Identificar as variáveis mais importantes para a determinação do preço dos veículos.
+-----
 
----
+## Objectives
 
-## Fontes de Dados
+  * Perform data preprocessing and cleaning, handling missing values and transforming variables.
+  * Conduct an exploratory data analysis (EDA) to extract insights about the price distribution and the relationship between vehicle characteristics.
+  * Develop and train regression models (RandomForest Regressor and XGBoost Regressor) to predict car prices.
+  * Evaluate and compare the performance of the models using metrics such as Mean Absolute Error (MAE), Mean Squared Error (MSE), and Coefficient of Determination (R²).
+  * Identify the most important variables for determining vehicle prices.
 
-* `precos_carros_brasil.csv`: Dataset principal contendo informações sobre diversos modelos de carros, suas características (marca, modelo, ano, motor, câmbio, combustível, etc.) e preços.
-* `metadados.xlsx - metadados.csv`: Arquivo contendo a descrição das colunas presentes no dataset principal, auxiliando no entendimento das variáveis.
-* A base original foi extraída do site [Kaggle](https://www.kaggle.com/datasets/vagnerbessa/average-car-prices-bazil/data). A mesma foi adaptada para ser utilizada no presente exercício.
+-----
 
----
+## Data Sources
 
-## Metodologia
+  * `precos_carros_brasil.csv`: Main dataset containing information about various car models, their characteristics (brand, model, year, engine, transmission, fuel, etc.), and prices.
+  * `metadados.xlsx - metadados.csv`: File containing the description of the columns present in the main dataset, aiding in the understanding of the variables.
+  * The original dataset was extracted from the [Kaggle](https://www.kaggle.com/datasets/vagnerbessa/average-car-prices-bazil/data) website. It was adapted for use in this exercise.
 
-1.  **Instalação e Importação de Bibliotecas:** Configuração do ambiente com as bibliotecas Python necessárias (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost).
-2.  **Carregamento e Inspeção Inicial dos Dados:** Leitura dos datasets e primeira visualização da estrutura e tipos de dados.
-3.  **Pré-processamento e Limpeza de Dados:**
-    * Tratamento de valores ausentes (utilizando mediana para dados numéricos e moda para categóricos).
-    * Remoção de duplicatas.
-    * Transformação de variáveis categóricas em numéricas (Label Encoding e One-Hot Encoding).
-4.  **Análise Exploratória de Dados (EDA):**
-    * Análise estatística descritiva das variáveis.
-    * Visualização da distribuição dos preços.
-    * Investigação da relação entre preço e outras características como marca, tipo de câmbio, tipo de combustível e ano do modelo.
-5.  **Engenharia de Features (se aplicável):**
-    * Seleção das features mais relevantes para a modelagem.
-6.  **Divisão dos Dados:** Separação do conjunto de dados em treino e teste.
-7.  **Treinamento dos Modelos:**
-    * RandomForest Regressor
-    * XGBoost Regressor
-8.  **Avaliação dos Modelos:**
-    * Cálculo das métricas MAE, MSE e R² para ambos os modelos no conjunto de teste.
-    * Comparação do desempenho para determinar o melhor modelo.
-9.  **Análise de Importância das Variáveis:** Identificação das features que mais contribuem para as previsões dos modelos.
+-----
 
----
+## Methodology
 
-## Principais Resultados e Conclusões
+1.  **Library Installation and Import:** Setting up the environment with the necessary Python libraries (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost).
+2.  **Data Loading and Initial Inspection:** Reading the datasets and a first look at the structure and data types.
+3.  **Data Preprocessing and Cleaning:**
+      * Handling missing values (using median for numerical data and mode for categorical data).
+      * Removing duplicates.
+      * Transforming categorical variables into numerical ones (Label Encoding and One-Hot Encoding).
+4.  **Exploratory Data Analysis (EDA):**
+      * Descriptive statistical analysis of the variables.
+      * Visualization of the price distribution.
+      * Investigation of the relationship between price and other characteristics such as brand, transmission type, fuel type, and model year.
+5.  **Feature Engineering (if applicable):**
+      * Selection of the most relevant features for modeling.
+6.  **Data Splitting:** Separating the dataset into training and testing sets.
+7.  **Model Training:**
+      * RandomForest Regressor
+      * XGBoost Regressor
+8.  **Model Evaluation:**
+      * Calculation of MAE, MSE, and R² metrics for both models on the test set.
+      * Performance comparison to determine the best model.
+9.  **Variable Importance Analysis:** Identification of the features that contribute most to the models' predictions.
 
-* **Tratamento de Dados:** Valores faltantes foram tratados com mediana e moda, e não foram encontradas duplicatas após a remoção inicial.
-* **Análise Exploratória:**
-    * Marcas com preços mais elevados tendem a ter modelos automáticos mais caros.
-    * Marcas mais caras geralmente oferecem modelos a gasolina e flex, enquanto os modelos a álcool tendem a ser mais baratos.
-* **Desempenho dos Modelos:**
-    * **RandomForest Regressor:**
-        * MAE: 4899.3127
-        * MSE: 96211948.1803
-        * R² Score: 0.9515
-    * **XGBoost Regressor:**
-        * MAE: 4515.4686
-        * MSE: 87097148.4247
-        * R² Score: 0.9561
+-----
 
-* **Melhor Modelo:** O modelo **XGBoost Regressor** apresentou o melhor desempenho geral, com um R² (coeficiente de determinação) de 0.9561, indicando uma alta capacidade de explicar a variabilidade dos preços dos carros.
-* **Importância das Variáveis:**
-    * No modelo RandomForest, `brand` (marca) e `engine_size` (tamanho do motor) foram as mais importantes.
-    ![alt text](images/variaveis_rf.png)
-    * No modelo XGBoost, `engine_size` (tamanho do motor) e `fuel` (tipo de combustível) tiveram maior impacto.
-    ![alt text](images/variaveis_xgb.png)
+## Main Results and Conclusions
 
-As análises e os modelos desenvolvidos fornecem insights relevantes sobre os fatores que determinam os preços dos carros no Brasil e demonstram a capacidade dos modelos de machine learning em realizar previsões precisas.
+  * **Data Handling:** Missing values were treated with median and mode, and no duplicates were found after the initial removal.
+
+  * **Exploratory Analysis:**
+
+      * Brands with higher prices tend to have more expensive automatic models.
+      * More expensive brands generally offer gasoline and flex-fuel models, while alcohol-powered models tend to be cheaper.
+
+  * **Model Performance:**
+
+      * **RandomForest Regressor:**
+          * MAE: 4899.3127
+          * MSE: 96211948.1803
+          * R² Score: 0.9515
+      * **XGBoost Regressor:**
+          * MAE: 4515.4686
+          * MSE: 87097148.4247
+          * R² Score: 0.9561
+
+  * **Best Model:** The **XGBoost Regressor** model showed the best overall performance, with an R² (coefficient of determination) of 0.9561, indicating a high capacity to explain the variability in car prices.
+
+  * **Variable Importance:**
+
+      * In the RandomForest model, `brand` and `engine_size` were the most important.
+      * In the XGBoost model, `engine_size` and `fuel` (fuel type) had the greatest impact.
+
+The analyses and the developed models provide relevant insights into the factors that determine car prices in Brazil and demonstrate the ability of machine learning models to make accurate predictions.
