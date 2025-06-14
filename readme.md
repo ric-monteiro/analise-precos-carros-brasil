@@ -91,6 +91,8 @@ Prof. Dr. Luani de Oliveira Rosa Piva
   * **Variable Importance:**
 
       * In the RandomForest model, `brand` and `engine_size` were the most important.
+        ![alt text](images/variaveis_rf.png)
       * In the XGBoost model, `engine_size` and `fuel` (fuel type) had the greatest impact.
+        ![alt text](images/variaveis_xgb.png)
 
 The analyses and the developed models provide relevant insights into the factors that determine car prices in Brazil and demonstrate the ability of machine learning models to make accurate predictions.
